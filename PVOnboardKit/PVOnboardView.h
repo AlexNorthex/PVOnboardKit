@@ -75,6 +75,8 @@ NS_SWIFT_NAME(OnboardView)
  */
 @property (nonatomic, assign) CGSize dotSize;
 
+- (void)updateContentss;
+
 /**
  * Spacing between two dot views. Default is 8.
  */
