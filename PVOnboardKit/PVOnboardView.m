@@ -94,6 +94,12 @@
     self.scrollView.contentSize = CGSizeMake(self.views.count * self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
 }
 
+- (void)updateContentss {
+    NSUInteger currentPageIndex = self.footerView.pageControl.currentPage;
+    [self.scrollView setContentOffset:CGPointMake(currentPageIndex * self.scrollView.bounds.size.width, 0.0f)
+                             animated:YES];
+}
+
 #pragma mark - UIScrollViewDelegate<NSObject>
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
